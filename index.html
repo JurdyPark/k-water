@@ -19,8 +19,8 @@
                 <a href="#">열린경영</a>
                 <ul>
                   <li><a href="#">경영공시</a></li>
-                  <li><a href="#">안전<span>.</span>환경</a></li>
-                  <li><a href="#">지속가능<span>.</span>ESG경영</a></li>
+                  <li><a href="#">안전·환경</a></li>
+                  <li><a href="#">지속가능·ESG경영</a></li>
                   <li><a href="#">윤리경영</a></li>
                   <li><a href="#">사회적가치실현</a></li>
                   <li><a href="#">일자리</a></li>
@@ -77,22 +77,23 @@
             <li><a href="#" title="새창이동, 영문 홈페이지" target="_blank">ENGLISH</a></li>
             <li><a href="#" title="새창이동, 국문 홈페이지" target="_blank">KOREAN</a></li>
           </ul>
-          <a href="#">검색창 열기</a>
-          <a href="#">검색창 닫기</a>  
+          <a href="#"><img src="img/header-search.png" alt="검색창 열기"></a> 
+          <a href="#"><img src="img/main-hambuger.png" alt="사이트맵" /></a>
         </div>
-        <div class="search">
-          <label for="search-keyword">검색어 입력</label>
-          <input type="text" placeholder="검색어를 입력해주세요." id="search-keyword">
-          <a href="#"><img src="img/head-search.png" alt="검색" /></a>
-        </div>
-        <span><a href="#"><img src="img/main-hambuger.png" alt="사이트맵" /></a></span>
+        <div id="layer-search">
+          <div class="search-box">
+            <label for="search-keyword">검색어 입력</label>
+            <input type="text" placeholder="검색어를 입력해주세요." id="search-keyword">
+            <a href="#"><img src="img/header-search.png" alt="검색" /></a>
+          </div>
+          <a href="#"><img src="img/header-search-close.png" alt="검색창 닫기"></a>
+        </div>  
       </header>
 
       <main id="main">
-        <section id="main-slogan">
+        <section id="main-visual">
           <div class="align-box">
-            <h2>슬로건</h2>
-            <img src="img/main-text1.png" alt="세상에 행복을 수놓다,World Top K-water" />
+            <h2><img src="img/main-visual-text.png" alt="세상에 행복을 수놓다,World Top K-water" /></h2>
           </div>
         </section>
         
@@ -127,13 +128,10 @@
               <div class="slide-card">
                 <ul>
                   <li>
-                    <a href=""><img src="img/popuo01.jpg" alt="시민안전모니터 요원 모집공고"></a>
+                    <a href=""><img src="img/k-water-popup02.jpg" alt="카카오톡이벤트"></a>
                   </li>
                   <li>
-                    <a href=""><img src="img/popup02.jpg" alt="카카오톡이벤트"></a>
-                  </li>
-                  <li>
-                    <a href=""><img src="img/popup03.jpg" alt="낙동강하굿둑 자연성 회복 사진 전시회"></a>
+                    <a href=""><img src="img/k-water-popup03.jpg" alt="낙동강하굿둑 자연성 회복 사진 전시회"></a>
                   </li>
                 </ul>
                 <div>
@@ -196,7 +194,7 @@
               <p>K-water의 서비스에 쉽고 빠르게 접근해보세요.</p>
             </div>
             <div class="content-box">
-              <div class="service-layout-left">
+              <div class="service-list">
                 <h3>온라인 고객센터</h3>
                 <ul>
                   <li>
@@ -216,8 +214,8 @@
                   </li>
                 </ul>
               </div>
-              <div class="service-layout-middle">
-                <div class="middle-long-box">
+              <div>
+                <div class="icon-service-list">
                   <ul>
                     <li>
                       <a href="#" target="_blank" title="새창이동, 소통플랫폼 단비톡톡 홈페이지">
@@ -245,7 +243,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="middle-mini-box">
+                <div class="my-service-list">
                   <h3>나의<br />물정보</h3>
                   <ul>
                     <li>
@@ -262,12 +260,12 @@
                     </li>
                   </ul>
                 </div>
-                <div class="middle-mini-box">
+                <div class="customer-center">
                   <h3>고객센터</h3>
                   <strong><a href="tel:1577-0600">1577 - 0600</a></strong>
                 </div>
               </div>
-              <div class="service-layout-right">
+              <div class="service-list">
                 <h3>열린경영</h3>
                 <span>투명 경영을 약속드립니다.</span>
                 <ul>
@@ -299,7 +297,7 @@
               <p>K-water의 다양한 소식을 공유합니다.</p>
             </div>
             <div class="content-box">
-              <ul>
+              <ul class="news-card">
                 <li>
                   <em>공지</em>
                   <a href="#">대덕 창업관리 휴게공간 조성공사 안전점검 수행기관 지정공고</a>
@@ -346,7 +344,7 @@
                   allowfullscreen></iframe>
                 <p>동영상</p>
               </div>
-              <div class="title=card">
+              <div class="title-card">
                 <a href="#"><img src="" alt="" /></a>
                 <p>카드뉴스</p>
               </div>
@@ -386,11 +384,11 @@
             </div>
             <div class="content-box">
               <div>
-                온라인수도박물관
+                <img src="img/main-culture-01.jpg" alt="K-water 온라인 수도박물관">
                 <a href="#">자세히 보기</a>
               </div>
               <div>
-                <ul>
+                <ul class="culture-list">
                   <li>
                     <a href="#" target="_blank" title="돌핀 커버 댄스 feat. 용담댐 물문화관, 유튜브 새창열림">
                       돌핀 커버 댄스 feat. 용담댐 물문화관
@@ -398,8 +396,10 @@
                   </li>
                   <li>
                     <a href="#" target="_blank" title="새창열림">
-                      <strong>BLOG</strong>
-                      <em>K-water가 추천하는 오천자전거길</em>
+                      <div>
+                        <strong>BLOG</strong>
+                        <em>K-water가 추천하는 오천자전거길</em>
+                      </div>
                     </a>
                   </li>
                 </ul>
