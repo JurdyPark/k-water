@@ -5,14 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>K-water</title>
+
+    <!-- <link rel="stylesheet" href="style-pc.css"> -->
+    <link rel="stylesheet" href="style2.css">
   </head>
 
   <body class="main">
     <div class="wrapper">
-      <a href="#main" class="skip-nav">본문바로가기</a>
+      <a href="#main" id="skip-nav">본문바로가기</a>
+      <!-- <header id="header" class="on"> -->
       <header id="header">
-        <div class="align-box">
-          <h1><a href="#"><img src="img/head_logo.png" alt="K water" /></a></h1>
+        <div class="align-container">
+          <h1 class="logo"><a href="#">k-water</a></h1>
           <nav id="gnb">
             <ul>
               <li>
@@ -73,12 +77,15 @@
               </li>
             </ul>
           </nav>
-          <ul class="language">
-            <li><a href="#" title="새창이동, 영문 홈페이지" target="_blank">ENGLISH</a></li>
-            <li><a href="#" title="새창이동, 국문 홈페이지" target="_blank">KOREAN</a></li>
-          </ul>
-          <a href="#"><img src="img/header-search.png" alt="검색창 열기"></a> 
-          <a href="#"><img src="img/main-hambuger.png" alt="사이트맵" /></a>
+          <div class="side-box">
+            <ul class="language">
+              <li class="on"><a href="#" title="새창이동, 영문 홈페이지" target="_blank">ENGLISH</a></li>
+              <li><a href="#" title="새창이동, 국문 홈페이지" target="_blank">KOREAN</a></li>
+            </ul>
+            <a href="#"><img src="img/main-hambuger.png" alt="사이트맵" /></a>
+            <a href="#"><img src="img/header-search.png" alt="검색창 열기"></a>
+            
+          </div>
         </div>
         <div id="layer-search">
           <div class="search-box">
@@ -91,43 +98,64 @@
       </header>
 
       <main id="main">
+        <ul class="page-nav">
+          <!--  준희
+          <li class="on"><a href="#">메인<span></span></a></li>
+          <li><a href="#">K-water<span></span></a></li>
+          <li><a href="#">서비스<span></span></a></li>
+          <li><a href="#">뉴스<span></span></a></li>
+          <li><a href="#">문화<span></span></a></li>
+          <li><a href="#">채용<span></span></a></li> -->
+          <li><a href="#"><span>메인</span></a></li>
+          <li><a href="#"><span>K-water</span></a></li>
+          <li><a href="#"><span>서비스</span></a></li>
+          <li  class="on"><a href="#"><span>뉴스</span></a></li>
+          <li><a href="#"><span>문화</span></a></li>
+          <li><a href="#"><span>채용</span></a></li>
+        </ul>
         <section id="main-visual">
-          <div class="align-box">
-            <h2><img src="img/main-visual-text.png" alt="세상에 행복을 수놓다,World Top K-water" /></h2>
-          </div>
+          <h2><img src="img/main-visual-text.png" alt="세상에 행복을 수놓다,World Top K-water" /></h2> 
         </section>
         
         <section id="main-k-water">
-          <div class="align-box">
+          <div class="align-container">
             <div class="title-box">
-              <span>타이틀마크</span>
+              <span></span>
               <h2>K-water</h2>
               <p>국가 물안전과 국민 물복지의 초석을 다져온 K-water!</p>
             </div>
             <div class="content-box">
-              <div class="card">
-                <a href="#">
-                  <h3>K-water CEO</h3>
-                  <p>
-                    깨끗하고 소중한 물로<br />
-                    더 행복한 대한민국을<br />
-                    만들겠습니다.
-                  </p>
-                  <span class="half-arrow"></span>
-                </a>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <h3>안전·환경</h3>
-                  <p>
-                    K-water의 안전경영현장을 소개합니다.
-                  </p>
-                  <span class="half-arrow"></span>
-                </a>
-              </div>
+              <ul class="left">
+                <li>
+                  <div class="card">
+                    <a href="#">
+                      <h3>K-water CEO</h3>
+                      <p>
+                        깨끗하고 소중한 물로<br />
+                        더 행복한 대한민국을<br />
+                        만들겠습니다.
+                      </p>
+                      <span class="half-arrow">더보기</span>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="card">
+                    <a href="#">
+                      <h3>안전·환경</h3>
+                      <p>
+                        K-water의 안전경영현장을 소개합니다.
+                      </p>
+                      <span class="half-arrow">더보기</span>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+              
+              
               <div class="slide-card">
                 <ul>
-                  <li>
+                  <li class="on">
                     <a href=""><img src="img/k-water-popup02.jpg" alt="카카오톡이벤트"></a>
                   </li>
                   <li>
@@ -136,58 +164,70 @@
                 </ul>
                 <div>
                   <strong>K-water 팝업존</strong>
-                  <span>현재페이지</span>
-                  <span>총페이지</span>
+                  <span>1</span>
+                  <span>2</span>
                   <ul>
-                    <li><a href="#">이전</a></li>
-                    <li><a href="#">재생</a></li>
-                    <li><a href="#">정지</a></li>
-                    <li><a href="#">다음</a></li>
+                    <li><a href="#" style="background-image: url(img/btn-left.png);"><span>이전</span></a></li>
+                    <li class="on">
+                      <a href="#" style="background-image: url(img/btn-play.png);">
+                        <span>재생</span>
+                        <span>정지</span>
+                      </a>
+                    </li>
+                    <li><a href="#" style="background-image: url(img/btn-right.png);"><span>다음</span></a></li>
                   </ul>
                 </div>
               </div>
-              <div class="card">
-                <a href="#">
-                  <h3>조직도/직원검색</h3>
-                  <p>
-                    깨끗한 물을 만드는<br />
-                    K-water의 가족입니다.
-                  </p>
-                  <span class="half-arrow"></span>
-                </a>
-              </div>
-              <div class="sns-card">
-                <h3>K-water SNS</h3>
-                <ul>
-                  <li>
-                    <a href="#" target="_blank" title="새창이동, 유튜브"><img src="img/youtube.png" alt="유튜브" /></a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank" title="새창이동, 페이스북"><img src="img/facebook.png" alt="페이스북" /></a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank" title="새창이동, 인스타그램"><img src="img/instagram.png" alt="인스타그램" /></a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank" title="새창이동, 네이버 블로그"><img src="img/naver-blog.png" alt="네이버 블로그" /></a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank" title="새창이동, 네이버 포스트"><img src="img/naver-post.png" alt="네이버 포스트" /></a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank" title="새창이동, 트위터"><img src="img/twiter.png" alt="트위터" /></a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank" title="새창이동, 카카오톡 채널"><img src="img/kakaotalk.png" alt="카카오톡 채널" /></a>
-                  </li>
-                </ul>
-              </div>
+              <ul class="right">
+                <li>
+                  <div class="card">
+                    <a href="#">
+                      <h3>조직도/직원검색</h3>
+                      <p>
+                        깨끗한 물을 만드는<br />
+                        K-water의 가족입니다.
+                      </p>
+                      <span class="half-arrow">더보기</span>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="sns-card">
+                    <h3>K-water SNS</h3>
+                    <ul>
+                      <li>
+                        <a href="#" target="_blank" title="새창이동, 유튜브"><img src="img/youtube.png" alt="유튜브" /></a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" title="새창이동, 페이스북"><img src="img/facebook.png" alt="페이스북" /></a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" title="새창이동, 인스타그램"><img src="img/instagram.png" alt="인스타그램" /></a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" title="새창이동, 네이버 블로그"><img src="img/naver-blog.png" alt="네이버 블로그" /></a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" title="새창이동, 네이버 포스트"><img src="img/naver-post.png" alt="네이버 포스트" /></a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" title="새창이동, 트위터"><img src="img/twiter.png" alt="트위터" /></a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" title="새창이동, 카카오톡 채널"><img src="img/kakaotalk.png" alt="카카오톡 채널" /></a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              
+              
             </div>
           </div>
         </section>
 
         <section id="main-service">
-          <div class="align-box">
+          <div class="align-container">
             <div class="title-box">
               <span>타이틀마크</span>
               <h2>서비스</h2>
@@ -214,55 +254,56 @@
                   </li>
                 </ul>
               </div>
-              <div>
-                <div class="icon-service-list">
-                  <ul>
+              <div class="mid-box">
+                <div class="mid-top">
+                  <ul class="icon-sv-list">
                     <li>
                       <a href="#" target="_blank" title="새창이동, 소통플랫폼 단비톡톡 홈페이지">
-                        <span>소통플랫폼아이콘</span>
+                        <span style="background-image: url(img/main-sv-icon01.png)">소통플랫폼아이콘</span>
                         <p>소통플랫폼<br />단비톡톡</p>
                       </a>
                     </li>
                     <li>
                       <a href="#" target="_blank" title="새창이동, 입찰안내 홈페이지">
-                        <span>입찰안내아이콘</span>
+                        <span style="background-image: url(img/main-sv-icon02.png)">입찰안내아이콘</span>
                         <p>입찰안내</p>
                       </a>
                     </li>
                     <li>
                       <a href="#" target="_blank" title="새창이동, K-water 물산업플랫폼 홈페이지">
-                        <span>물산업플랫폼아이콘</span>
+                        <span style="background-image: url(img/main-sv-icon03.png)">물산업플랫폼아이콘</span>
                         <p>동반성장<br />물산업플랫폼</p>
                       </a>
                     </li>
                     <li>
                       <a href="#" target="_blank" title="새창이동, 분양정보 홈페이지">
-                        <span>분양정보아이콘</span>
+                        <span style="background-image: url(img/main-sv-icon04.png)">분양정보아이콘</span>
                         <p>분양정보</p>
                       </a>
                     </li>
-                  </ul>
+                  </ul>                  
                 </div>
-                <div class="my-service-list">
-                  <h3>나의<br />물정보</h3>
-                  <ul>
-                    <li>
-                      <a href="#">
-                        <span>지방상수도포털아이콘</span>
-                        <p>지방상수도포털</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">물정보포털 My Water</a>
-                    </li>
-                    <li>
-                      <a href="#">실시간 수문정보</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="customer-center">
-                  <h3>고객센터</h3>
-                  <strong><a href="tel:1577-0600">1577 - 0600</a></strong>
+                <div class="mid-bottom">
+                  <div class="my-sv-list">
+                    <h3>나의<br />물정보</h3>
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <span>지방상수도포털</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">물정보포털 My Water</a>
+                      </li>
+                      <li>
+                        <a href="#">실시간 수문정보</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="customer-center">
+                    <h3>고객센터</h3>
+                    <strong><a href="tel:1577-0600">1577 - 0600</a></strong>
+                  </div>
                 </div>
               </div>
               <div class="service-list">
@@ -289,94 +330,98 @@
             </div>
           </div>
         </section>
+
         <section id="main-news">
-          <div class="align-box">
+          <div class="align-container">
             <div class="title-box">
               <span>타이틀마크</span>
               <h2>뉴스</h2>
               <p>K-water의 다양한 소식을 공유합니다.</p>
             </div>
             <div class="content-box">
-              <ul class="news-card">
-                <li>
+              <ul>
+                <li class="news-card">
                   <em>공지</em>
                   <a href="#">대덕 창업관리 휴게공간 조성공사 안전점검 수행기관 지정공고</a>
                   <em>2022-06-10</em>
                   <a href="#">더보기</a>
                 </li>
-                <li>
+                <li class="news-card">
                   <em>공지</em>
                   <a href="#">금산권지사 22년 5월 정수, 수도꼭지 수질검사 결과입니다.</a>
                   <em>2022-06-10</em>
                   <a href="#">더보기</a>
                 </li>
-                <li>
+                <li class="news-card">
                   <em>공지</em>
                   <a href="#">철원군 지방상수도 현대사회사업 블록 구축공사(전체분) 안전점검기관 지정 공고</a>
                   <em>2022-06-09</em>
                   <a href="#">더보기</a>
                 </li>
-                <li>
+                <li class="news-card">
                   <em>보도</em>
                   <a href="#">한국수자원공사, 자연과 미래를 위한 플로깅 챌린지 실시</a>
                   <em>2022-05-04</em>
                   <a href="#">더보기</a>
                 </li>
               </ul>
-              <div class="webzine-card">
-                <a href="#" target="_blank" title="새창이동, 웹진">
-                  <strong>WEBZINE</strong>
-                  <em>2022년 6월 / vol.651</em>
+              <div class="bottom">
+                <div class="webzine-card">
+                  <a href="#" target="_blank" title="새창이동, 웹진">
+                    <strong>WEBZINE</strong>
+                    <em>2022년 6월 / vol.651</em>
+                    <ul>
+                      <li>
+                        <a href="#" target="_blank" title="새창이동, 웹진">웹진 보러가기</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" title="새창이동, 웹진">구독 신청하기</a>
+                      </li>
+                    </ul>
+                  </a>
+                </div>
+                <div class="title-card">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/bz-IJNylNaE"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                  <p>동영상</p>
+                </div>
+                <div class="title-card">
+                  <a href="#"><img src="" alt="" /></a>
+                  <p>카드뉴스</p>
+                </div>
+                <div class="slide-card">
                   <ul>
                     <li>
-                      <a href="#" target="_blank" title="새창이동, 웹진">웹진 보러가기</a>
+                      <a href="#" target="_blank" title="새창이동"><img src="" alt="국민추천포상" /></a>
                     </li>
                     <li>
-                      <a href="#" target="_blank" title="새창이동, 웹진">구독 신청하기</a>
+                      <a href="#" target="_blank" title="새창이동"><img src="" alt="공공계약 부패행위 신고기간" /></a>
+                    </li>
+                    <li>
+                      <a href="#" target="_blank" title="새창이동"><img src="" alt="전사순직군인 유가족찾기" /></a>
                     </li>
                   </ul>
-                </a>
-              </div>
-              <div class="title-card">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/bz-IJNylNaE"
-                  title="YouTube video player" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
-                <p>동영상</p>
-              </div>
-              <div class="title-card">
-                <a href="#"><img src="" alt="" /></a>
-                <p>카드뉴스</p>
-              </div>
-              <div class="slide-card">
-                <ul>
-                  <li>
-                    <a href="#" target="_blank" title="새창이동"><img src="" alt="국민추천포상" /></a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank" title="새창이동"><img src="" alt="공공계약 부패행위 신고기간" /></a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank" title="새창이동"><img src="" alt="전사순직군인 유가족찾기" /></a>
-                  </li>
-                </ul>
-                <div>
-                  <strong>공공알림</strong>
-                  <span>현재페이지</span>
-                  <span>총페이지</span>
-                  <ul>
-                    <li><a href="#">이전</a></li>
-                    <li><a href="#">재생</a></li>
-                    <li><a href="#">정지</a></li>
-                    <li><a href="#">다음</a></li>
-                  </ul>
+                  <div>
+                    <strong>공공알림</strong>
+                    <span>현재페이지</span>
+                    <span>총페이지</span>
+                    <ul>
+                      <li><a href="#">이전</a></li>
+                      <li><a href="#">재생</a></li>
+                      <li><a href="#">정지</a></li>
+                      <li><a href="#">다음</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+        
         <section id="main-culture">
-          <div class="align-box">
+          <div class="align-container">
             <div class="title-box">
               <span>타이틀마크</span>
               <h2>문화</h2>
@@ -409,7 +454,7 @@
           </div>
         </section>
         <section id="main-recruit">
-          <div class="align-box">
+          <div class="align-container">
             <div class="title-box">
               <span>타이틀마크</span>
               <h2>채용</h2>
@@ -475,7 +520,7 @@
       </main>
 
       <footer id="footer">
-        <div class="align-box">
+        <div class="align-container">
           <div class="footer-top-box">
             <ul>
               <li><a href="#">개인정보 처리방침</a></li>
@@ -485,29 +530,29 @@
             </ul>
             <ul>
               <li>
-                <a href="#" target="_blank" title="새창이동, 유튜브"><img src="" alt="유튜브" /></a>
+                <a href="#" target="_blank" title="새창이동, 유튜브"><img src="img/footer-youtube.png" alt="유튜브" /></a>
               </li>
               <li>
-                <a href="#" target="_blank" title="새창이동, 페이스북"><img src="" alt="페이스북" /></a>
+                <a href="#" target="_blank" title="새창이동, 페이스북"><img src="img/footer-facebook.png" alt="페이스북" /></a>
               </li>
               <li>
-                <a href="#" target="_blank" title="새창이동, 인스타그램"><img src="" alt="인스타그램" /></a>
+                <a href="#" target="_blank" title="새창이동, 인스타그램"><img src="img/footer-instagram.png" alt="인스타그램" /></a>
               </li>
               <li>
-                <a href="#" target="_blank" title="새창이동, 네이버 블로그"><img src="" alt="네이버 블로그" /></a>
+                <a href="#" target="_blank" title="새창이동, 네이버 블로그"><img src="img/footer-blog.png" alt="네이버 블로그" /></a>
               </li>
               <li>
-                <a href="#" target="_blank" title="새창이동, 네이버 포스트"><img src="" alt="네이버 포스트" /></a>
+                <a href="#" target="_blank" title="새창이동, 네이버 포스트"><img src="img/footer-naverpost.png" alt="네이버 포스트" /></a>
               </li>
               <li>
-                <a href="#" target="_blank" title="새창이동, 트위터"><img src="" alt="트위터" /></a>
+                <a href="#" target="_blank" title="새창이동, 트위터"><img src="img/footer-twiter.png" alt="트위터" /></a>
               </li>
               <li>
-                <a href="#" target="_blank" title="새창이동, 카카오톡 채널"><img src="" alt="카카오톡 채널" /></a>
+                <a href="#" target="_blank" title="새창이동, 카카오톡 채널"><img src="img/footer-kakao.png" alt="카카오톡 채널" /></a>
               </li>
             </ul>
             <ul>
-              <li>관련사이트<span><img src="" alt="" /></span></li>
+              <li><a href="#">관련사이트<span>더보기</span></a></li>
               <li><a href="#">Water (물정보포털)</a></li>
               <li><a href="#">K-water 단비톡톡</a></li>
               <li><a href="#">K-water 연구원</a></li>
@@ -521,17 +566,16 @@
               주소 : 34350 대전광역시 대덕구 신탄진로 200
             </address>
             <p>대표전화: <a href="tel:042-629-3114">042-629-3114</a></p>
-            <p>/</p>
             <p>고객센터: <a href="tel:1577-0600">1577-0600</a></p>
             <p>Copyright © K-water All Rights Reserved.</p>
-            <ul>
-              <li><img src="" alt="" /></li>
-              <li><a href="#"><img src="" alt="" /></a></li>
-              <li><img src="" alt="" /></li>
-              <li><img src="" alt="" /></li>
-              <li><img src="" alt="" /></li>
-              <li><img src="" alt="" /></li>
-              <li><a href="#"><img src="" alt="" /></a></li>
+            <ul class="certificate">
+              <li><img src="img/white-logo.png" alt="k water" /></li>
+              <li><a href="#"><img src="img/certificate-01.png" alt="과학기술정보통신부 WEB접근성" /></a></li>
+              <li><img src="img/certificate-02.png" alt="Most Admired MAKE" /></li>
+              <li><img src="img/certificate-03.png" alt="ICSI" /></li>
+              <li><img src="img/certificate-04.png" alt="K-GWPI" /></li>
+              <li><img src="img/certificate-05.png" alt="Most Admired Cempanica" /></li>
+              <li><a href="#"><img src="img/certificate-06.png" alt="RE100" /></a></li>
             </ul>
           </div>
         </div>

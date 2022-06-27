@@ -1,0 +1,175 @@
+body {margin: 0;}
+h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p {margin: 0; padding: 0;}
+li {list-style: none;}
+address, em, i, cite {font-style: normal;}
+a {text-decoration: none; color: inherit;}
+
+
+section {display: none;}
+footer {display: none;}
+
+
+/* 공통 모듈 */
+div.align-container {width: 100%; max-width: 1440px; height: 615px; margin: 0 auto; position: relative;}
+div.align-container > div.title-box {width: 100%; margin: 0 auto; text-align: center;}
+div.align-container > div.title-box span {display: block;background: url(img/main-logo-bl.png) center center no-repeat; width: 43px; height: 34px; margin: 0 auto;}
+div.align-container > div.title-box h2 {font-size: 42px; margin: 16px 0;}
+div.align-container > div.title-box p {font-size: 19px;}
+
+div.card {background-color: yellow; width: 100%; height: 200px; border-top-left-radius: 20px; border-bottom-right-radius: 20px; box-sizing: border-box; box-shadow: 2px 2px 15px rgba(63, 68, 138, 0.15);}
+div.card > a {display: block; padding: 28px 0 0 38.5px; box-sizing: border-box; height: 100%;}
+div.card > a > h3 {font-size: 26px; margin-bottom: 20px;}
+div.card > a > h3::after {content: ''; width: 25px; height: 5px; background-color: #3d66c4; display: block; margin-top: 10px;}
+div.card > a p {font-size: 16px; line-height: 1.4;}
+div.card > a span.half-arrow {display: inline-block; width: 34px; height: 15px; background: url(img/arrow_bk.png) center center no-repeat; text-indent: -99999px;}
+
+div.sns-card {background-color: lime; width: 100%; border-top-left-radius: 20px; border-bottom-right-radius: 20px; padding: 28px 0 0 38.5px; box-sizing: border-box;}
+div.slide-card {background-color: lightcoral; height: 475px; border-top-left-radius: 30px; border-top-right-radius: 30px; position: relative; overflow: hidden;}
+div.slide-card > div {position: absolute; left: 0; bottom: 0; background-color: #ffffff; width: 100%; height: 50px;}
+div.slide-card > div > strong {position: absolute; left: 15px; top: 50%; transform: translate(0, -50%);}
+div.slide-card > div > span:nth-of-type(1){position: absolute; right: 140px; top: 50%; transform: translate(0, -50%);}
+div.slide-card > div > span:nth-of-type(1)::after {content: '/'; width: 20px; height: 20px; display: block; position: absolute; left: 15px; top: 0;}
+div.slide-card > div > span:nth-of-type(2){position: absolute; right: 110px; top: 50%; transform: translate(0, -50%);}
+div.slide-card > div > ul {position: absolute; right: 20px; top: 50%; transform: translate(0, -50%);}
+div.slide-card > div > ul > li {display: inline-block; width: 10px; height: 17px; vertical-align: middle;}
+div.slide-card > div > ul > li + li {margin-left: 15px;}
+div.slide-card > div > ul > li  a {display: inline-block; width: 100%; height: 100%; background: url(img/btn-left.png) center center no-repeat;}
+div.slide-card > div > ul > li.on  a {background-image: url(img/btn-stop.png) !important;}
+div.slide-card > div > ul > li  a span {text-indent: -99999px; display: inline-block; overflow: hidden;}
+
+
+
+
+/* 시작 */
+#skip-nav {display: block; width: 100%; line-height: 30px;
+    position: fixed; left: 0; top: -40px;
+    font-size: 15px; text-align: center; 
+    background-color: tomato; opacity: 0.7; z-index: 101; }
+#skip-nav:focus {top: 0;}
+
+#header {background-color: #ffffff; width: 100%; height: 70px; position: fixed; left: 0; top: 0; z-index: 100; box-shadow: 0 1px 8px rgb(243, 243, 243);}
+#header div.align-container {position: relative; height: 100%;}
+#header h1 {position: absolute; left: 0; top: 50%; transform: translate(0, -50%); width: 87px; height: 70px;}
+#header h1 > a {display: block; height: 100%; text-indent: -999px; overflow: hidden; background: url(img/header-logo.png) center center no-repeat; background-size: contain;}
+#gnb {max-width: 850px; height: 100%; margin: 0 auto;}
+#gnb > ul {height: 100%;}
+#gnb > ul::after {content: ''; display: block; clear: both;}
+#gnb > ul > li {float: left; width: 20%; height: 100%;}
+#gnb > ul > li > a {display: block; font-size: 21px; padding: 20px 0; box-sizing: border-box; height: 100%; text-align: center;}
+
+#gnb > ul > li > ul {background-color: pink; height: 315px; width: 100%; padding: 20px 20px 0 20px; box-sizing: border-box; border-left: 1px solid black; display: none;}
+#gnb > ul > li > ul:last-child {border-right: 1px solid black;}
+#gnb > ul > li > ul > li {}
+#gnb > ul > li > ul > li > a {font-size: 16px; line-height: 32px;}
+#header::before {content: ''; width: 100%; height: 0px; background-color: #ffffff; position: absolute; top: 100%; left: 0;}
+#header.on::before {height: 315px;}
+#header.on #gnb > ul > li > ul {display: block;}
+
+#header div.side-box {width: 159px; height: 30px; position: absolute; right: 0; top: 50%; transform: translate(0, -50%);}
+#header div.side-box > ul.language {position: absolute; left: 0; top: 50%; transform: translate(0, -50%);}
+#header div.side-box > a {position: absolute;}
+#header div.side-box > a:nth-of-type(1) {left: 88px; top: 50%; transform: translate(0, -50%); width: 23px; height: 23px; text-align: center; line-height: 30px;}
+#header div.side-box > a:nth-of-type(2) {right: 0; top: 50%; transform: translate(0, -50%); width: 21px; height: 30px; text-align: center; line-height: 35px;}
+
+#header div.side-box > ul.language > li {display: none;}
+#header div.side-box > ul.language > li.on {display: block;}
+
+
+
+
+#layer-search {display: none;}
+
+
+
+#main {position: relative; width: 100%; height: 100vh;}
+#main > section {width: 100%; height: 100%}
+
+
+
+#main ul.page-nav {position: fixed; right: 50px; top: 200px; z-index: 100;}
+/* 준희
+#main ul.page-nav > li {background-color: yellow; width: 8px; height: 8px; border-radius: 50%;}
+#main ul.page-nav > li + li {margin-top: 50px;}
+#main ul.page-nav > li a {position: relative; display: block;}
+#main ul.page-nav > li a::after {content: '메인2';display: block; color: #ffffff; position: absolute; left: -30px;}
+#main ul.page-nav > li a span {background: url(img/sub-nav-active.png) center center no-repeat; background-size: cover; display: block; width: 25px; height: 36px; display: none;}
+#main ul.page-nav > li:nth-child(3n) a span {background-image: url(img/sub-nav-active-wh.png);}
+#main ul.page-nav > li a:hover span {display: block;}
+#main ul.page-nav > li a.on {} */
+
+/* 조교님*/
+/* #main ul.page-nav {width: 30px;}
+#main ul.page-nav > li {margin-bottom: 50px; position: relative; height: 20px;}
+#main ul.page-nav > li span {width: 7px; height: 7px; border-radius: 50%; overflow: hidden; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-indent: -99999px; display: block; background-color: #fff;}
+#main ul.page-nav > li a::after {content: '메인'; position: absolute; color: #fff; display: block; width: 100px; left: -50px; display: none;}
+#main ul.page-nav > li a:hover::after {display: block;}
+#main ul.page-nav > li.on a::after {font-weight: 700; color: blue; font-size: 22px; display: block;}
+#main ul.page-nav > li.on a span {background: url(img/sub-nav-active.png) center center no-repeat; background-size: cover; display: block; width: 25px; height: 36px;} */
+
+#main ul.page-nav {}
+#main ul.page-nav > li {margin-bottom: 50px; background-color: lightgreen; position: relative; height: 20px;}
+#main ul.page-nav > li span {width: 7px; height: 7px; border-radius: 50%; background-color: #ffffff; text-indent: -999px; overflow: hidden; display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+#main ul.page-nav > li > a {position: relative;}
+#main ul.page-nav > li > a::after {content: '메인'; display: none; color: #ffffff; position: absolute; left: -80px; top: -9px; font-size: 20px; }
+#main ul.page-nav > li:nth-child(2) > a::after {content: 'K-water';}
+#main ul.page-nav > li:nth-child(3) > a::after {content: '서비스';}
+#main ul.page-nav > li:nth-child(4) > a::after {content: '뉴스';}
+#main ul.page-nav > li:nth-child(5) > a::after {content: '문화';}
+#main ul.page-nav > li:nth-child(6) > a::after {content: '채용';}
+#main ul.page-nav > li > a:hover:after {display: block;}
+#main ul.page-nav > li.on a::after {font-size: 22px; color: #3d66c4; display: block;}
+#main ul.page-nav > li.on span {background: url(img/sub-nav-active.png) center center no-repeat; width: 25px; height: 36px;}
+
+
+
+section#main-visual {display: block;} /*나중에 삭제*/
+#main #main-visual {width: 100%; height: calc(100% - 70px); margin-top: 70px; 
+background: url(img/main-visual-bg01.jpg) 0 center no-repeat; background-size: cover;}
+#main #main-visual div.align-container h2 {position: absolute; left: 63px; top: 133px;}
+#main #main-visual div.align-container h2 img {display: block; max-width: 592px;}
+
+
+section#main-k-water {display: block;} /*나중에 삭제*/
+#main #main-k-water {padding-top: 165px; box-sizing: border-box;}
+#main-k-water div.content-box {width: 100%; margin-top: 20px;}
+#main-k-water div.content-box::after {content: ''; display: block; clear: both;}
+#main-k-water div.content-box > * {width: calc((100% / 3) - 13.33px); float: left;}
+
+#main-k-water div.content-box > ul.left {margin-right: 20px;}
+#main-k-water div.content-box > div.slide-card {margin-right: 20px;}
+
+#main-k-water ul.left > li:first-child div.card {height: 266px; background: url(img/main-k-water-ceo-bg.png) center center no-repeat; background-size: cover; color: #ffffff; margin-bottom: 15px;}
+#main-k-water ul.left > li:first-child div.card > a h3::after {background-color: #ffffff;}
+#main-k-water ul.left > li:first-child div.card > a span.half-arrow {background-image: url(img/arrow_wh.png); margin-top: 50px; transition: transform 0.3s;}
+#main-k-water ul.left > li:first-child div.card:hover p {text-decoration: underline;}
+#main-k-water ul.left > li:first-child div.card:hover span {transform: translate(20px, 0);}
+
+#main-k-water ul.left > li:last-child div.card {height: 193px; background-image: url(img/main-k-water-safe-bg-02.png), url(img/main-k-water-safe-bg-01.png); background-size: auto, 100% 100%; background-position: right bottom, center center; background-repeat: no-repeat;}
+#main-k-water ul.left > li:last-child div.card > a span.half-arrow {margin-top: 38px; margin-left: 360px; transition: transform 0.3s;}
+#main-k-water ul.left > li:last-child div.card:hover p {text-decoration: underline;}
+#main-k-water ul.left > li:last-child div.card:hover span {transform: translate(20px, 0);}
+
+#main-k-water ul.right > li:first-child div.card {height: 230px; background: url(img/main-k-water-member-bg-01.png) center center no-repeat; background-size: cover;margin-bottom: 15px;}
+#main-k-water ul.right > li:first-child div.card > a span.half-arrow {margin-top: 30px; transition: transform 0.3s;}
+#main-k-water ul.right > li:first-child div.card:hover p {text-decoration: underline;}
+#main-k-water ul.right > li:first-child div.card:hover span {transform: translate(20px, 0);}
+
+
+#main-k-water ul.right > li:last-child div.sns-card {height: 229px; background: #b9c3ff url(img/main-k-water-sns-bg-01.png) right bottom no-repeat;}
+#main-k-water ul.right > li:last-child div.sns-card > h3 {font-size: 26px; margin-bottom: 20px;}
+#main-k-water ul.right > li:last-child div.sns-card > ul > li {float: left; margin: 0 8px 8px 0; transition: transform 0.3s;}
+#main-k-water ul.right > li:last-child div.sns-card > ul > li:nth-child(4) {clear: both;}
+#main-k-water ul.right > li:last-child div.sns-card > ul > li:hover img {transform: rotate(360deg);}
+
+/* 슬라이드 카드 공통모듈로 뺌 
+#main-k-water div.content-box > div.slide-card {height: 475px; border-top-left-radius: 30px; border-top-right-radius: 30px; position: relative; overflow: hidden;}
+#main-k-water div.content-box > div.slide-card > div {position: absolute; left: 0; bottom: 0; background-color: antiquewhite; width: 100%; height: 50px;} */
+#main-k-water div.content-box > div.slide-card > ul {width: 100%; height: 100%;}
+#main-k-water div.content-box > div.slide-card > ul > li {position: absolute; left: 0; top: 0; display: none;}
+#main-k-water div.content-box > div.slide-card > ul > li.on {display: block;}
+#main-k-water div.content-box > div.slide-card > div {background-color: #18263b; color: #ffffff;}
+#main-k-water div.content-box > div.slide-card > div > strong {font-size: 20px;}
+#main-k-water div.content-box > div.slide-card > div > span {font-size: 17px;}
+
+
+section#main-service {display: block; background-color: lightcoral;}
