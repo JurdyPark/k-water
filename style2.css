@@ -15,7 +15,7 @@ a {text-decoration: none; color: inherit;}
 
 
 #header {width: 100%; height: 70px; background-color: #ffffff; position: fixed; left: 0; top: 0; z-index: 100; box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 8%);}
-#header::after {content: ''; width: 100%; height: 0px; display: block;    background-color: #ffffff; box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 8%);position: relative;}
+#header::after {content: ''; width: 100%; height: 0px; display: block;    background-color: #ffffff; box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 8%);position: relative; background: #ffffff url(img/doed.png) 0px 0px no-repeat;}
 #header > div.align-container {width: 100%; max-width: 1440px; height: 100%; margin: 0 auto; position: relative;background-color: #ffffff}
 #header h1 {position: absolute; left: 25px; top: 50%; transform: translate(0, -50%); width: 87px; height: 70px;}
 #header h1 > a {display: block; height: 100%; text-indent: -999px; overflow: hidden; background: url(img/header-logo.png) center center no-repeat; background-size: contain;}
@@ -56,17 +56,20 @@ div.title-box {width: 100%; margin: 0 auto; text-align: center;}
 div.title-box span {display: block;background: url(img/main-logo-bl.png) center center no-repeat; width: 43px; height: 34px; margin: 0 auto; text-indent: -99999px; overflow: hidden;}
 div.title-box h2 {font-size: 42px; margin: 16px 0;}
 div.title-box p {font-size: 19px;}
-div.content-box {background-color: lightgrey; width: 100%; margin-top: 50px;}
+div.content-box {background-color: lightgrey; width: 100%; margin-top: 50px; box-sizing: border-box;}
 
 div.card {background-color: yellow; width: 100%; height: 200px; border-top-left-radius: 20px; border-bottom-right-radius: 20px; box-sizing: border-box; box-shadow: 2px 2px 15px rgba(63, 68, 138, 0.15);}
+
 div.card > a {display: block; padding: 28px 0 0 38.5px; box-sizing: border-box; height: 100%;}
 div.card > a > h3 {font-size: 26px; margin-bottom: 20px;}
 div.card > a > h3::after {content: ''; width: 25px; height: 5px; background-color: #3d66c4; display: block; margin-top: 10px;}
 div.card > a p {font-size: 16px; line-height: 1.4;}
-div.card > a span.half-arrow {display: inline-block; width: 34px; height: 15px; background: url(img/arrow_bk.png) center center no-repeat; text-indent: -99999px;}
+div.card > a span.half-arrow {display: inline-block; width: 34px; height: 15px; background: url(img/arrow_bk.png) center center no-repeat; text-indent: -99999px;} 
 
 div.sns-card {background-color: lime; width: 100%; border-top-left-radius: 20px; border-bottom-right-radius: 20px; padding: 28px 0 0 38.5px; box-sizing: border-box;}
-div.slide-card {background-color: lightcoral; height: 475px; border-top-left-radius: 30px; border-top-right-radius: 30px; position: relative; overflow: hidden;}
+
+div.slide-card {background-color: lightcoral; width: 100%;   height: 475px; border-top-left-radius: 30px; border-top-right-radius: 30px; position: relative; overflow: hidden;}
+
 div.slide-card > div {position: absolute; left: 0; bottom: 0; background-color: #ffffff; width: 100%; height: 50px;}
 div.slide-card > div > strong {position: absolute; left: 15px; top: 50%; transform: translate(0, -50%);}
 div.slide-card > div > span:nth-of-type(1){position: absolute; right: 140px; top: 50%; transform: translate(0, -50%);}
@@ -107,9 +110,14 @@ section#main-visual {width: 100%; height: calc(100vh - 70px); margin-top: 70px;
 #main-k-water{display: block;}
 #main-k-water {background-color: #ffffff; padding-top: calc(165px - 34px); box-sizing: border-box;} /*34px는 title박스 아이콘높이*/
 #main-k-water div.content-box::after {content: ''; display: block; clear: both;}
-#main-k-water div.content-box > * {width: calc((100% / 3) - 13.33px); float: left;}
+/* #main-k-water div.content-box > * {width: calc((100% / 3) - 13.33px); float: left;} */
+#main-k-water div.content-box > * {width: 32.5%; float: left;}
 #main-k-water div.content-box > ul.left {margin-right: 20px;}
-#main-k-water div.content-box > div.slide-card {margin-right: 20px;}
+#main-k-water div.content-box > div.slide-card {margin: 0 1.25%;}
+
+#main-k-water div.content-box > ul.left li {width: 100%;}
+
+
 
 #main-k-water ul.left > li:first-child div.card {height: 266px; background: url(img/main-k-water-ceo-bg.png) center center no-repeat; background-size: cover; color: #ffffff; margin-bottom: 15px;}
 #main-k-water ul.left > li:first-child div.card > a h3::after {background-color: #ffffff;}
@@ -139,7 +147,7 @@ section#main-visual {width: 100%; height: calc(100vh - 70px); margin-top: 70px;
 #main-k-water div.content-box > div.slide-card > div > strong {font-size: 20px;}
 #main-k-water div.content-box > div.slide-card > div > span {font-size: 17px;}
 
-#main-service {display: block;}
+/* #main-service {display: block;} */
 #main-service {padding-top: calc(165px - 34px); box-sizing: border-box; background: url(img/main-sv-bg.jpg) center center no-repeat; background-size: cover;}
 #main-service div.content-box::after {content: ''; display: block; clear: both;}
 #main-service div.content-box {width: 100%; height: 440px; background-color: pink;}
@@ -166,7 +174,7 @@ div.mid-bottom > div.customer-center h3 {font-size: 26px;}
 div.mid-bottom > div.customer-center strong {font-size: 38px;}
 div.mid-bottom > div.customer-center a:hover {text-decoration: underline;}
 
-#main-news {display: block;}
+/* #main-news {display: block;} */
 #main-news {background-color: lightblue; padding-top: calc(165px - 34px); box-sizing: border-box;}
 #main-news div.content-box > ul {background-color: lightcoral; width: 100%; height: 198px; overflow: hidden;}
 #main-news div.content-box > ul > li {float: left; width: 23.5%; height: 100%;}
